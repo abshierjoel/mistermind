@@ -1,0 +1,83 @@
+body {
+  background-color: #282c34;
+}
+
+.App {
+  width: 50%;
+  max-width: 600px;
+  min-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-size: 4rem;
+  text-align: center;
+}
+
+p.guesses {
+  color: white;
+  font-size: 2rem;
+}
+
+ul.board {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-gap: 2rem;
+
+  list-style: none;
+  padding: unset;
+}
+
+.board > .square {
+  padding: 1rem;
+  border: 3px solid white;
+}
+
+.board > .square.red {
+  background-color: tomato;
+}
+.board > .square.blue {
+  background-color: dodgerblue;
+}
+.board > .square.green {
+  background-color: springgreen;
+}
+.board > .square.yellow {
+  background-color: palegoldenrod;
+}
+
+.board > .square::before {
+  content: '';
+  padding-bottom: 100%;
+  display: block;
+}
+
+.board > button.square {
+  opacity: 0.8;
+  border: 8px dashed white;
+  cursor: pointer;
+}
+
+.board > button.make-guess {
+  width: 100%;
+  padding: 40px;
+  grid-column: 1 / -1;
+
+  background: white;
+  color: #282c34;
+  border: unset;
+  cursor: pointer;
+
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.board > button.make-guess:hover {
+  background-color: azure;
+}
+.board > button.make-guess:active {
+  background-color: slategrey;
+}
